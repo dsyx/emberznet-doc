@@ -13,6 +13,7 @@
 * [UG103.3：设计选择基础](./doc/ug/UG103.3.md)
 * [UG103.4：HAL 基础](./doc/ug/UG103.4.md)
 * [UG103.5：安全基础](./doc/ug/UG103.5.md)
+* [UG103.6：Bootloading 基础](./doc/ug/UG103.6.md)
 * [UG103.7：非易失性数据存储基础](./doc/ug/UG103.7.md)
 * [UG103.9：ZLL 基础知识](./doc/ug/UG103.9.md)
 * [UG103.16：多协议基础](./doc/ug/UG103.16.md)
