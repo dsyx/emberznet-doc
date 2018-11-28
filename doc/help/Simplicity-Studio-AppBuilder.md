@@ -2,7 +2,7 @@
 
 - [**引言**](#引言)
 - [**如何使用 Simplicity Studio AppBuilder**](#如何使用-simplicity-studio-appbuilder)
-- [**创建一个新的设备配置**](#创建一个新的设备配置)
+- [**创建新的设备配置**](#创建新的设备配置)
     - [**General Application Configuration Tab**](#general-application-configuration-tab)
     - [**ZCL Global Configuration Tab**](#zcl-global-configuration-tab)
     - [**ZCL Cluster Configuration Tab**](#zcl-cluster-configuration-tab)
@@ -12,6 +12,13 @@
     - [**Plugin Configuration Tab**](#plugin-configuration-tab)
     - [**Callback Configuration Tab**](#callback-configuration-tab)
     - [**ZCL Include Configuration Tab**](#zcl-include-configuration-tab)
+- [**保存设备配置**](#保存设备配置)
+- [**预览设备构建文件**](#预览设备构建文件)
+- [**生成设备构建文件**](#生成设备构建文件)
+- [**建立二进制映像**](#建立二进制映像)
+- [**加载二进制映像**](#加载二进制映像)
+- [**自定义簇**](#自定义簇)
+- [**设置 Simplicity Studio AppBuilder 首选项**](#设置-simplicity-studio-appbuilder-首选项)
 
 --------------------------------------------------------------------------------
 
@@ -91,7 +98,7 @@ Simplicity Studio AppBuilder 生成配置文件，您可以从 Ember 应用框�
 
 --------------------------------------------------------------------------------
 
-# **创建一个新的设备配置**
+# **创建新的设备配置**
 
 每个 ZigBee 设备对应单个设备配置，并在单个设备配置编辑器中表示。
 
@@ -544,5 +551,188 @@ EmberZNet PRO 栈包括多个级别的调试。栈中包含的调试越多，栈
 要包含自定义事件，请单击 “New” 按钮。您的自定义事件将自动包含在生成的 **endpoint_configuration.c** 文件的事件配置部分中。事件函数和事件控制的存根将生成到 **callbacks.c** 文件中。您还可以将生成的事件控制值和函数的名称更改为您想要的任何值。
 
 有关事件如何工作的更多信息，请参阅文档 120-3028-000，**Application Framework Developer Guide**，该文档随栈安装文档以及 Silicon Labs 网站提供。
+
+--------------------------------------------------------------------------------
+
+# **保存设备配置**
+
+一旦您创建了一个设备配置，您可以通过选择在任何时候保存它：
+
+**File | Save...** 
+
+**.isc** 文件格式是 AppBuilder 的本地格式。您为配置选择的所有设置都保存到此文件中，并在将来打开 AppBuilder 中的文件时加载。
+
+要打开以前保存的 **.isc** 文件，请选择：
+
+**File | Open...**
+
+--------------------------------------------------------------------------------
+
+# **预览设备构建文件**
+
+Simplicity Studio AppBuilder 配备了一个名为预览窗口（Preview Pane）的工具。打开预览窗口时，对输出文件的任何更改都会以黄色突出显示。此突出显示对于检查您的设置是否反映在最终生成的用于构建应用程序的配置文件中非常有用。预览窗口对于帮助您了解应用框架的内部结构以及常规的 ZigBee 非常有用。
+
+![preview.jpg](../../pic/Simplicity-Studio-AppBuilder-F15.jpg)
+
+--------------------------------------------------------------------------------
+
+# **生成设备构建文件**
+
+在 ZCL、Stack、HAL、Plugins、Callback 和 Includes 选项卡中完成设备配置后，您就可以生成设备构建文件。只需单击 **Generate** 按钮即可完成此操作。
+
+**生成目录**
+
+生成目录需要与栈目录相同。这是因为生成的项目文件希望在特定位置找到包含的栈库和框架文件相对于它们自己的位置。因此，虽然 Simplicity Studio AppBuilder 允许您指示生成文件的位置，但您无法在任何您喜欢的地方生成文件，并无法保证项目文件将正确编译。
+
+![generate.jpg](../../pic/Simplicity-Studio-AppBuilder-F16.jpg)
+
+**Simplicity Studio AppBuilder 生成的文件**
+
+当您单击 **Generate** 按钮时，Simplicity Studio AppBuilder 会生成设备配置文件，其中一些在此表中描述。这些文件在构建时配置 Ember 应用框架，以便在编译的二进制图像中包含相应的代码和设置。
+
+| File Name | Generation Directory | Description |
+| :-------- | :------------------- | :---------- |
+| \<device name\>.h | \<generation directory\>/app/builder/\<device name\>/ | Application configuration header file. This is the main applicationconfiguration header file for your device. This file includes allof the #defines required to configure your device. |
+| \<device name\>\_endpoint\_config.h | \<generation directory\>/app/builder/\<device name\>/ | Endpoint configuration header file. This file specifies the structure ofthe attribute metadata and value storage table. This file essentiallymakes multiple endpoints possible by constructing the attribute table insuch a way as to limit the amount of flash used. |
+| \<device name\>\_callbacks.c | \<generation directory\>/app/builder/\<device name\>/ | This is the only .c file created by Simplicity Studio AppBuilder. It is only created in the casewhere you want Simplicity Studio AppBuilder to create a stub file for handling callbacks you haveactivated in the callbacks tab. |
+| \<device name\>\_board.h | \<generation directory\>/app/builder/\<device name\>/ | This is the board header file for your device. This file includes allthe #defines required to configurethe hardware abstraction layer to work with your device. |
+| \<device name\>\_tokens.h | \<generation directory\>/app/builder/\<device name\>/\<device name\>\_tokens.h | This is a token header file used to configure storing data intokens (SIMEEPROM). If you have chosen to have any attributes persistacross reboots, the configuration data for these settings arestored in this file. |
+
+--------------------------------------------------------------------------------
+
+# **建立二进制映像**
+
+通过单击 **Generate** 按钮生成构建和配置文件后，即可构建二进制映像。Simplicity Studio AppBuilder 支持多种编译器，包括：
+
+* IAR Embedded Workbench for the Cortex (EM35x, stm32f, stm32w)
+* GCC ARM Embedded
+
+您可以选择在 Simplicity Studio 中编译应用程序，方法是单击锤子图标以在工具栏中构建，或者在您选择的编译器中打开生成的项目文件并在那里构建。
+
+--------------------------------------------------------------------------------
+
+# **加载二进制映像**
+
+创建二进制映像后，下一步是将其加载到您的设备上。Silicon Labs 提供了四种可用于此目的的工具：
+
+* em2xx_load.exe
+* EM2USBLoad.exe
+* EM2ISALoad.exe
+* em3xx_load.exe
+
+您还可以使用 Simplicity Studio 将二进制映像加载到您的设备上。Simplicity Studio 使用代理的 2xx 和 3xx 系列工具在您的设备上加载映像。有关详细信息，请参阅 **Simplicity Studio User's guide** 和在线帮助。
+
+有关使用四种工具之一将映像加载到设备上的信息，请参阅以下文档：
+
+* em2xx_load.exe: 120_4020_000_2xx_Utilities_Guide.pdf - Used to load images onto 2xx devices connected to an EmberInSight Adapter from the command line. 
+* EM2USBLoad.exe: 120_4022_000USB_Link_Users_Guide.pdf - Used to load images onto devices connected to an InSightUSBLink from the command line. Note: InSightUSB Link is legacy software. While it is stillmaintained and supported, it is not being activelydeveloped. It is highly recommended that customerswork with InSight Adapter or with one of our gangprogramming partners for improved reliability. 
+* EM2ISALoad.exe: 120_4022_000USB_Link_Users_Guide.pdf - Used to load images onto devices connected to InSight Adapters. Thisprogram is similar to em2xx_load, but with the addedadvantage of being able to load over the Ethernet through an Ember Debug Adapteror over USB through a USBLink. 
+* em3xx_load.exe: 120_4032_3xx_Utilities_Guide.pdf - Used to load images onto 35x devices connected to an EmberDebug Adapter (ISA3) from the command line. 
+
+您可以通过 Silicon Labs 网站的 ZigBee 部分找到这些指南，网址为 http://www.silabs.com/zigbee 。
+
+![upload_image.jpg](../../pic/Simplicity-Studio-AppBuilder-F17.jpg)
+
+--------------------------------------------------------------------------------
+
+# **自定义簇**
+
+您可以将自己的自定义簇添加到任何（non-Demo）栈配置中，位于 **Simplicity Studio AppBuilder Preferences, File | Preferences | Simplicity Studio AppBuilder**。要添加自定义簇，必须在 xml 文件中描述簇，就像栈配置使用的那样。下面提供了一个示例的自定义 xml 描述文件。有关如何格式化 Simplicity Studio AppBuilder 的簇 xml 描述文件的更详细示例，请参阅位于所选栈的 **/tool/appbuilder** 目录中的文件 **ami.xml**。
+
+> Note：应用框架期望所有属性和命令的簇 ID、属性 Id、命令 ID 和方向（客户端到服务端/服务端到客户端）是唯一的。
+
+**示例的簇描述文件**
+
+```xml
+<?xml version="1.0"?>
+<configurator> 
+  <cluster>
+    <name>Custom Cluster</name>
+    <domain>Custom Domain</domain>
+    <description>This cluster provides an example of
+      how a custom cluster is created.</description>
+    <code>0xfc00</code>
+    <define>CUSTOM_CLUSTER</define>
+    <client init="false" tick="true">true</client>
+    <server init="false" tick="false">true</server>
+    <attribute side="server" type="INT8U" code="0x0000"
+      writable="true" default="0x1e" min="0x00" max="0xff"
+      define="CUSTOM_ATTRIBUTE_1">custom attribute 1</attribute>
+    <attribute side="server" type="INT8U" code="0x0001"
+      writable="true" default="0x1e" min="0x00" max="0xff"
+      define="CUSTOM_ATTRIBUTE_2">custom attribute 2</attribute>
+    <command code="0x0" name="CustomCommand" source="server">
+      <description>
+        A custom command
+      </description>
+      <arg name="customArg1" type="INT8U"/>
+      <arg name="customArg2" type="INT8U"/>
+      <arg name="customArg3" type="INT8U"/>
+    </command>
+  </cluster>
+  <!-- Custom Devices -->
+  <deviceType>
+    <name>Custom Device</name>
+    <domain>Custom Domain</domain>
+    <typeName>Custom type name</typeName>
+    <zigbeeType editable="true">Coordinator</zigbeeType>
+    <!-- Manufacturer specific application profiles start at 0xC000 -->
+    <profileId editable="false">0xC000</profileId>
+    <deviceId editable="false">0x0000</deviceId>
+    <channels editable="false"><channel>11</channel><channel>14</channel>
+    <channel>15</channel><channel>19</channel><channel>20</channel>
+    <channel>24</channel><channel>25</channel></channels>
+    <clusters lockOthers="true">
+      <include client="false" server="true"
+        clientLocked="true" serverLocked="true" >Basic</include>
+      <include client="false" server="true" clientLocked="true"
+        serverLocked="true" >Identify</include>
+      <include client="false" server="true" clientLocked="true"
+        serverLocked="true">Custom Cluster</include>
+    </clusters> 
+  </deviceType>
+</configurator>
+```
+
+**安装自定义簇**
+
+安装自定义簇数据涉及以下几个步骤：
+
+1. 在自定义簇 xml 文件中描述您的簇，如上述提供的那样。
+2. 选择要添加自定义簇的栈。注意，您无法将自定义簇添加到 Demo 栈配置文件中。
+3. 选中 “Enable custom clusters” 复选框，打开所选栈配置的自定义簇。
+4. 单击数据文件表右侧的 “New” 按钮，将自定义簇 xml 文件导入 Simplicity Studio AppBuilder。
+5. 在 EmberZNet PRO 4.6 之前，通过单击 “Core AppFramework Data Files” 右下角的绿色箭头重新生成应用框架数据文件。注意，这一步往往被忽视，但非常重要。如果没有与自定义簇关联的正确生成的头文件，您的设备将无法编译。从 4.6 开始，此步骤不是必需的。
+
+**配置文件信息**
+
+在首选项对话框的底部是一个名为配置文件信息表的树形展示。此表显示所选栈版本支持的 ZigBee Cluster Library 功能的树视图。此视图不是交互式显示。它只是提供了一种查看所选栈的 ZCL 内部的便捷方式。
+
+加载自定义栈信息后，您应该看到它包含在配置文件信息表中，如下所示。
+
+![cluster_info_table.jpg](../../pic/Simplicity-Studio-AppBuilder-F18.jpg)
+
+--------------------------------------------------------------------------------
+
+# **设置 Simplicity Studio AppBuilder 首选项**
+
+要为 Simplicity Studio AppBuilder 设置首选项，请选择 **File | Preferences | Network Applications**。
+
+![pref.jpg](../../pic/Simplicity-Studio-AppBuilder-F19.jpg)
+
+此首选项对话框允许您：
+
+* 将新栈版本添加到 Simplicity Studio AppBuilder 已知的版本中
+* 将自定义簇添加到已安装的任何栈版本
+* 重新生成应用框架的生成代码
+* 检查所选栈的 ZigBee 簇库的完整性
+
+要使用 Simplicity Studio AppBuilder 生成工作应用程序，您必须拥有 EmberZNet PRO 栈的有效版本，并且必须使用 “Add Stack Version” 对话框识别 Simplicity Studio AppBuilder 的栈位置。创建配置后，其栈版本将被锁定。
+
+> Note：您无法更改现有配置文件的栈版本。
+
+如果您希望使用其他栈版本，则必须通过选择 **File | New** 来创建具有所选栈版本的新配置。
+
+生成文件的默认路径位于所选栈的根目录。您可以在配置文件中更改此位置。
 
 --------------------------------------------------------------------------------
