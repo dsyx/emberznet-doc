@@ -17,6 +17,7 @@
 * [UG103.7：非易失性数据存储基础](./doc/ug/UG103.7.md)
 * [UG103.9：ZLL 基础知识](./doc/ug/UG103.9.md)
 * [UG103.16：多协议基础](./doc/ug/UG103.16.md)
+* [UG105：使用协议栈和 HAL API 进行高级应用编程](./doc/ug/UG105.md)
 
 帮助类：
 * [Simplicity Studio AppBuilder](./doc/help/Simplicity-Studio-AppBuilder.md)
