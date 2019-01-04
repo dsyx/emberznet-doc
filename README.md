@@ -6,7 +6,7 @@
 
 > 本仓库主要着重于 EmberZnet 6.5.0.0 及后续版本，EmberZnet 6.5.0.0 之前的版本备份到其它分支。
 
-# 目录 <!-- omit in toc -->
+## 目录 <!-- omit in toc -->
 
 - [EmberZnet 6.5.0.0](#emberznet-6500)
   - [用户指南](#用户指南)
