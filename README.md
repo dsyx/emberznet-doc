@@ -27,4 +27,5 @@
 ## 应用笔记
 
 * [x] [AN1089 - 在 ZigBee 设备上使用安装码](./EmberZnet%206.5.0.0/AN1089/AN1089.md)
+* [ ] [AN1115 - 在 Simplicity Studio 中为 32-bit 设备配置外设](./EmberZnet%206.5.0.0/AN1115/AN1115.md)
 * [x] [AN1154 - 使用 Token 进行非易失性数据存储](./EmberZnet%206.5.0.0/AN1154/AN1154.md)
