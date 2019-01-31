@@ -8,25 +8,26 @@
 
 ## 目录 <!-- omit in toc -->
 
-- [EmberZnet 6.5.0.0](#emberznet-6500)
+- [EmberZnet 6.5.X.X](#emberznet-65xx)
   - [基础系列](#基础系列)
   - [用户指南](#用户指南)
   - [应用笔记](#应用笔记)
 
-# EmberZnet 6.5.0.0
+# EmberZnet 6.5.X.X
 
 ## 基础系列
 
-* [x] [UG103.1 - 无线网络应用开发基础](./EmberZnet%206.5.0.0/UG103.1/UG103.1.md)
-* [x] [UG103.2 - ZigBee 基础](./EmberZnet%206.5.0.0/UG103.2/UG103.2.md)
+* [x] [UG103.1 - 无线网络应用开发基础](./EmberZnet%206.5.X.X/UG103.1/UG103.1.md)
+* [x] [UG103.2 - ZigBee 基础](./EmberZnet%206.5.X.X/UG103.2/UG103.2.md)
+* [ ] [UG103.3 - 应用开发基础：设计选择](./EmberZnet%206.5.X.X/UG103.3/UG103.3.md)
 
 ## 用户指南
 
-* [ ] [UG102 - Ember® 应用框架开发指南](./EmberZnet%206.5.0.0/UG102/UG102.md)
+* [ ] [UG102 - Ember® 应用框架开发指南](./EmberZnet%206.5.X.X/UG102/UG102.md)
 
 ## 应用笔记
 
-* [x] [AN1089 - 在 ZigBee 设备上使用安装码](./EmberZnet%206.5.0.0/AN1089/AN1089.md)
-* [x] [AN1115 - 在 Simplicity Studio 中为 32-bit 设备配置外设](./EmberZnet%206.5.0.0/AN1115/AN1115.md)
-* [x] [AN1135 - 使用 NVM3 进行数据存储](./EmberZnet%206.5.0.0/AN1135/AN1135.md)
-* [x] [AN1154 - 使用 Token 进行非易失性数据存储](./EmberZnet%206.5.0.0/AN1154/AN1154.md)
+* [x] [AN1089 - 在 ZigBee 设备上使用安装码](./EmberZnet%206.5.X.X/AN1089/AN1089.md)
+* [x] [AN1115 - 在 Simplicity Studio 中为 32-bit 设备配置外设](./EmberZnet%206.5.X.X/AN1115/AN1115.md)
+* [x] [AN1135 - 使用 NVM3 进行数据存储](./EmberZnet%206.5.X.X/AN1135/AN1135.md)
+* [x] [AN1154 - 使用 Token 进行非易失性数据存储](./EmberZnet%206.5.X.X/AN1154/AN1154.md)
