@@ -19,7 +19,8 @@
 
 * [x] [UG103.1 - 无线网络应用开发基础](./EmberZnet%206.5.X.X/UG103.1/UG103.1.md)
 * [x] [UG103.2 - ZigBee 基础](./EmberZnet%206.5.X.X/UG103.2/UG103.2.md)
-* [x] [UG103.3 - 应用开发基础：设计选择](./EmberZnet%206.5.X.X/UG103.3/UG103.3.md)
+* [x] [UG103.3 - 设计选择基础](./EmberZnet%206.5.X.X/UG103.3/UG103.3.md)
+* [ ] [UG103.5 - 安全基础](./EmberZnet%206.5.X.X/UG103.5/UG103.5.md)
 
 ## 用户指南
 
