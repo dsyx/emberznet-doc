@@ -21,6 +21,7 @@
 * [x] [UG103.2 - ZigBee 基础](./EmberZnet%206.5.X.X/UG103.2/UG103.2.md)
 * [x] [UG103.3 - 设计选择基础](./EmberZnet%206.5.X.X/UG103.3/UG103.3.md)
 * [x] [UG103.5 - 安全基础](./EmberZnet%206.5.X.X/UG103.5/UG103.5.md)
+* [ ] [UG103.6 - 引导加载基础](./EmberZnet%206.5.X.X/UG103.6/UG103.6.md)
 
 ## 用户指南
 
