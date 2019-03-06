@@ -26,7 +26,7 @@
 ## 用户指南
 
 * [ ] [UG102 - Ember® 应用框架开发指南](./EmberZnet%206.5.X.X/UG102/UG102.md)
-* [ ] [UG266 - Silicon Labs Gecko Bootloader 用户指南](./EmberZnet%206.5.X.X/UG266/UG266.md)
+* [x] [UG266 - Silicon Labs Gecko Bootloader 用户指南](./EmberZnet%206.5.X.X/UG266/UG266.md)
 
 ## 应用笔记
 
