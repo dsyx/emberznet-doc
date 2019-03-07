@@ -30,6 +30,7 @@
 
 ## 应用笔记
 
+* [ ] [AN728 - Over-the-Air Bootload Server and Client Setup](./EmberZnet%206.5.X.X/AN728/AN728.md)
 * [x] [AN1089 - 在 ZigBee 设备上使用安装码](./EmberZnet%206.5.X.X/AN1089/AN1089.md)
 * [x] [AN1115 - 在 Simplicity Studio 中为 32-bit 设备配置外设](./EmberZnet%206.5.X.X/AN1115/AN1115.md)
 * [x] [AN1135 - 使用 NVM3 进行数据存储](./EmberZnet%206.5.X.X/AN1135/AN1135.md)
