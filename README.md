@@ -17,21 +17,21 @@
 
 ## 基础系列
 
-* [x] [UG103.1 - 无线网络应用开发基础](./EmberZnet%206.5.X.X/UG103.1/UG103.1.md)
-* [x] [UG103.2 - ZigBee 基础](./EmberZnet%206.5.X.X/UG103.2/UG103.2.md)
-* [x] [UG103.3 - 设计选择基础](./EmberZnet%206.5.X.X/UG103.3/UG103.3.md)
-* [x] [UG103.5 - 安全基础](./EmberZnet%206.5.X.X/UG103.5/UG103.5.md)
-* [x] [UG103.6 - 引导加载基础](./EmberZnet%206.5.X.X/UG103.6/UG103.6.md)
+* [x] [UG103.1 - Wireless Networking Application Development Fundamentals](./EmberZnet%206.5.X.X/UG103.1/UG103.1.md)
+* [x] [UG103.2 - Zigbee Fundamentals](./EmberZnet%206.5.X.X/UG103.2/UG103.2.md)
+* [x] [UG103.3 - Application Development Fundamentals: Design Choices](./EmberZnet%206.5.X.X/UG103.3/UG103.3.md)
+* [x] [UG103.5 - Application Development Fundamentals: Security](./EmberZnet%206.5.X.X/UG103.5/UG103.5.md)
+* [x] [UG103.6 - Bootloading Fundamentals](./EmberZnet%206.5.X.X/UG103.6/UG103.6.md)
 
 ## 用户指南
 
-* [ ] [UG102 - Ember® 应用框架开发指南](./EmberZnet%206.5.X.X/UG102/UG102.md)
-* [x] [UG266 - Silicon Labs Gecko Bootloader 用户指南](./EmberZnet%206.5.X.X/UG266/UG266.md)
+* [ ] [UG102 - EMBER® APPLICATION FRAMEWORK DEVELOPER GUIDE](./EmberZnet%206.5.X.X/UG102/UG102.md)
+* [x] [UG266 - Silicon Labs Gecko Bootloader User’s Guide](./EmberZnet%206.5.X.X/UG266/UG266.md)
 
 ## 应用笔记
 
 * [ ] [AN728 - Over-the-Air Bootload Server and Client Setup](./EmberZnet%206.5.X.X/AN728/AN728.md)
-* [x] [AN1089 - 在 ZigBee 设备上使用安装码](./EmberZnet%206.5.X.X/AN1089/AN1089.md)
-* [x] [AN1115 - 在 Simplicity Studio 中为 32-bit 设备配置外设](./EmberZnet%206.5.X.X/AN1115/AN1115.md)
-* [x] [AN1135 - 使用 NVM3 进行数据存储](./EmberZnet%206.5.X.X/AN1135/AN1135.md)
-* [x] [AN1154 - 使用 Token 进行非易失性数据存储](./EmberZnet%206.5.X.X/AN1154/AN1154.md)
+* [x] [AN1089 - Using Installation Codes with Zigbee Devices](./EmberZnet%206.5.X.X/AN1089/AN1089.md)
+* [x] [AN1115 - Configuring Peripherals for 32-Bit Devices in Simplicity Studio](./EmberZnet%206.5.X.X/AN1115/AN1115.md)
+* [x] [AN1135 - Using Third Generation Non-Volatile Memory (NVM3) Data Storage](./EmberZnet%206.5.X.X/AN1135/AN1135.md)
+* [x] [AN1154 - Using Tokens for Non-Volatile Data Storage](./EmberZnet%206.5.X.X/AN1154/AN1154.md)
