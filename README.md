@@ -30,7 +30,7 @@
 
 ## 应用笔记
 
-* [ ] [AN728 - Over-the-Air Bootload Server and Client Setup](./EmberZnet%206.5.X.X/AN728/AN728.md)
+* [x] [AN728 - Over-the-Air Bootload Server and Client Setup](./EmberZnet%206.5.X.X/AN728/AN728.md)
 * [x] [AN1089 - Using Installation Codes with Zigbee Devices](./EmberZnet%206.5.X.X/AN1089/AN1089.md)
 * [x] [AN1115 - Configuring Peripherals for 32-Bit Devices in Simplicity Studio](./EmberZnet%206.5.X.X/AN1115/AN1115.md)
 * [x] [AN1135 - Using Third Generation Non-Volatile Memory (NVM3) Data Storage](./EmberZnet%206.5.X.X/AN1135/AN1135.md)
