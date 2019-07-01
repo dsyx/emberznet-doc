@@ -1,4 +1,4 @@
-# Silicon Labs' EmberZnet <!-- omit in toc -->
+# emberznet-doc <!-- omit in toc -->
 
 本仓库随 EmberZnet 协议栈更新。若未在对应的 EmberZnet 协议栈版本中找到译文，则可以参考其它版本。
 
@@ -8,30 +8,27 @@
 
 ## 目录 <!-- omit in toc -->
 
-- [EmberZnet 6.5.X.X](#emberznet-65xx)
-  - [基础系列](#基础系列)
-  - [用户指南](#用户指南)
-  - [应用笔记](#应用笔记)
+- [基础系列](#基础系列)
+- [用户指南](#用户指南)
+- [应用笔记](#应用笔记)
 
-# EmberZnet 6.5.X.X
+# 基础系列
 
-## 基础系列
+* [x] [UG103.1 - Wireless Networking Application Development Fundamentals](./UG103.1/UG103.1.md) - Rev. 1.1
+* [x] [UG103.2 - Zigbee Fundamentals](./UG103.2/UG103.2.md) - Rev. 1.1
+* [x] [UG103.3 - Application Development Fundamentals: Design Choices](./UG103.3/UG103.3.md) - Rev. 2.1
+* [x] [UG103.5 - Application Development Fundamentals: Security](./UG103.5/UG103.5.md) - Rev. 1.0
+* [x] [UG103.6 - Bootloading Fundamentals](./UG103.6/UG103.6.md) - Rev. 1.3
 
-* [x] [UG103.1 - Wireless Networking Application Development Fundamentals](./EmberZnet%206.5.X.X/UG103.1/UG103.1.md)
-* [x] [UG103.2 - Zigbee Fundamentals](./EmberZnet%206.5.X.X/UG103.2/UG103.2.md)
-* [x] [UG103.3 - Application Development Fundamentals: Design Choices](./EmberZnet%206.5.X.X/UG103.3/UG103.3.md)
-* [x] [UG103.5 - Application Development Fundamentals: Security](./EmberZnet%206.5.X.X/UG103.5/UG103.5.md)
-* [x] [UG103.6 - Bootloading Fundamentals](./EmberZnet%206.5.X.X/UG103.6/UG103.6.md)
+# 用户指南
 
-## 用户指南
+* [ ] [UG102 - EMBER® APPLICATION FRAMEWORK DEVELOPER GUIDE](./UG102/UG102.md)
+* [x] [UG266 - Silicon Labs Gecko Bootloader User’s Guide](./UG266/UG266.md) - Rev. 0.6
 
-* [ ] [UG102 - EMBER® APPLICATION FRAMEWORK DEVELOPER GUIDE](./EmberZnet%206.5.X.X/UG102/UG102.md)
-* [x] [UG266 - Silicon Labs Gecko Bootloader User’s Guide](./EmberZnet%206.5.X.X/UG266/UG266.md)
+# 应用笔记
 
-## 应用笔记
-
-* [x] [AN728 - Over-the-Air Bootload Server and Client Setup](./EmberZnet%206.5.X.X/AN728/AN728.md)
-* [x] [AN1089 - Using Installation Codes with Zigbee Devices](./EmberZnet%206.5.X.X/AN1089/AN1089.md)
-* [x] [AN1115 - Configuring Peripherals for 32-Bit Devices in Simplicity Studio](./EmberZnet%206.5.X.X/AN1115/AN1115.md)
-* [x] [AN1135 - Using Third Generation Non-Volatile Memory (NVM3) Data Storage](./EmberZnet%206.5.X.X/AN1135/AN1135.md)
-* [x] [AN1154 - Using Tokens for Non-Volatile Data Storage](./EmberZnet%206.5.X.X/AN1154/AN1154.md)
+* [x] [AN728 - Over-the-Air Bootload Server and Client Setup](./AN728/AN728.md) - Rev. 1.0
+* [x] [AN1089 - Using Installation Codes with Zigbee Devices](./AN1089/AN1089.md) - Rev. 0.2
+* [x] [AN1115 - Configuring Peripherals for 32-Bit Devices in Simplicity Studio](./AN1115/AN1115.md) - Rev. 0.4
+* [x] [AN1135 - Using Third Generation Non-Volatile Memory (NVM3) Data Storage](./AN1135/AN1135.md) - Rev. 0.6
+* [x] [AN1154 - Using Tokens for Non-Volatile Data Storage](./AN1154/AN1154.md) - Rev. 0.3
