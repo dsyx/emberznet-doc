@@ -1,6 +1,6 @@
 # emberznet-doc <!-- omit in toc -->
 
-本仓库不再更新，新的译文将放在我的个人站中：[https://dsyx.github.io/tags/Silicon-Labs/](https://dsyx.github.io/tags/Silicon-Labs/)
+本仓库不再更新，新的译文将放在我的个人站中。
 
 由于翻译需要耗费个人时间，所以更新速度可能有点慢。
 
